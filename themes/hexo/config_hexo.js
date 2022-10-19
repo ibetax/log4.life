@@ -1,6 +1,6 @@
 const CONFIG_HEXO = {
   HOME_BANNER_ENABLE: true,
-  HOME_BANNER_GREETINGS: ['欢迎来到我的博客🎉', '这里会记录我的生活', '这里会记录我的工作', '这里会记录我的阅读'], // 首页大图标语文字
+  HOME_BANNER_GREETINGS: ['欢迎来到我的博客🎉', '这里会记录我的生活', '这里会记录我的工作', '这里会记录我的阅读', '👋欢迎━(*｀∀´*)ノ亻!'], // 首页大图标语文字
 
   HOME_NAV_BUTTONS: true, // 首页是否显示分类大图标按钮
 
@@ -19,7 +19,7 @@ const CONFIG_HEXO = {
   ARTICLE_RECOMMEND: true, // 文章关联推荐
 
   WIDGET_LATEST_POSTS: true, // 显示最新文章卡
-  WIDGET_ANALYTICS: true, // 显示统计卡
+  WIDGET_ANALYTICS: false, // 显示统计卡
   WIDGET_TO_TOP: true,
   WIDGET_TO_COMMENT: true, // 跳到评论区
   WIDGET_DARK_MODE: true, // 夜间模式
