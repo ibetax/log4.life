@@ -30,24 +30,29 @@ const Index = props => {
  * @param {*} param0
  * @returns
  */
-export async function getStaticProps({ params: { keyword } }) {
+export async function getStaticProps({ params: { keyword, page } }) {
   const props = await getGlobalNotionData({
     from: 'search-props',
     pageType: ['Post']
   })
   const { allPages } = props
-  const allPosts = allPages.filter(page => page.type === 'Post')
+  const allPosts = allPages.filter(page => page.type === 'Post' && page.status === 'Published')
   props.posts = await filterByMemCache(allPosts, keyword)
+  props.postCount = props.posts.length
+  // 处理分页
+  props.posts = props.posts.slice(BLOG.POSTS_PER_PAGE * (page - 1), BLOG.POSTS_PER_PAGE * page - 1)
   props.keyword = keyword
+  props.page = page
+  delete props.allPages
   return {
     props,
-    revalidate: 1
+    revalidate: parseInt(BLOG.NEXT_REVALIDATE_SECOND)
   }
 }
 
 export async function getStaticPaths() {
   return {
-    paths: [{ params: { keyword: BLOG.TITLE } }],
+    paths: [{ params: { keyword: BLOG.TITLE, page: '1' } }],
     fallback: true
   }
 }
