@@ -1,6 +1,6 @@
 // 注: process.env.XX是Vercel的环境变量，配置方式见：https://docs.tangly1024.com/zh/features/personality
 const BLOG = {
-  AUTHOR: 'log4life', // 作者
+  AUTHOR: 'logger', // 作者
   BIO: '不想做运维的产品经理不是好研发', // 作者简介
   LINK: 'https://www.log4.life', // 网站地址
   KEYWORDS: '记录, 生活, 工作, 阅读', // 网站关键词 英文逗号隔开
