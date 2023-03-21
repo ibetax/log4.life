@@ -16,7 +16,7 @@ import BLOG from '@/blog.config'
 const LayoutBase = props => {
   const { children, meta } = props
   return (
-        <div className='dark:text-gray-300  bg-white dark:bg-black'>
+        <div id='theme-example' className='dark:text-gray-300  bg-white dark:bg-black'>
             <CommonHead meta={meta} />
             {/* 顶栏LOGO */}
             <Header {...props} />
@@ -25,7 +25,7 @@ const LayoutBase = props => {
             <Nav {...props} />
 
             {/* 主体 */}
-            <div id='container-inner' className="w-full">
+            <div id='container-inner' className="w-full relative z-10">
 
                 <Title {...props} />
 
@@ -41,7 +41,7 @@ const LayoutBase = props => {
 
             <Footer {...props} />
 
-            <div className='fixed right-4 bottom-4'>
+            <div className='fixed right-4 bottom-4 z-10'>
                 <JumpToTopButton />
             </div>
         </div>

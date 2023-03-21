@@ -1,8 +1,4 @@
 /* eslint-disable */
-/**
- * https://codepen.io/juliangarnier/pen/gmOwJX
- * custom by hexo-theme-yun @YunYouJun
- */
 import React from 'react'
 
 export const StarrySky = () => {
@@ -11,7 +7,7 @@ export const StarrySky = () => {
   }, [])
   return (
     <div className="relative">
-      <canvas id="starry-sky-vixcity" className="fixed"></canvas>
+      <canvas id="starry-sky-vixcity" className="fixed pointer-events-none"></canvas>
     </div>
   )
 }

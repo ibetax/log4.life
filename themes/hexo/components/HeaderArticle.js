@@ -65,5 +65,5 @@ export default function HeaderArticle({ post, siteInfo }) {
         </div>
       </header>
     </div>
-  );
+  )
 }
